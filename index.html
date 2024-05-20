@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Error 404</title>
+</head>
+<body>
+<h1 id="errorText">Error 404</h1>
+<script>
+// Function to initiate file download when clicking on the heading
+document.getElementById("errorText").addEventListener("click", function() {
+    // Create an anchor element
+    var link = document.createElement("a");
+    // Set the href attribute to the Google Drive file URL
+    link.href = "https://drive.google.com/uc?export=download&id=1y4bpPTiqFnTnK5y0pamwlqO6F0jAEn7l"; // Replace "YOUR_FILE_ID" with the actual file ID from Google Drive
+    // Set the download attribute to the desired file name
+    link.download = "discrete_practicals.zip"; // Replace "filename.txt" with the desired file name
+    // Append the anchor element to the document body
+    document.body.appendChild(link);
+    // Trigger a click event on the anchor element
+    link.click();
+    // Remove the anchor element from the document body
+    document.body.removeChild(link);
+});
+</script>
+</body>
+</html>
